@@ -1,0 +1,44 @@
+************sin error************
+SEMANTICO_OK BEGIN{
+
+NUM A,B,C,RES1,RES2;
+
+WORD APE,NOM,DIR;
+
+RES1=A+B+C;
+
+RES2=APE+NOM+DIR;
+
+SEND (#EL RESULTADO DE LA SUMA ES #);
+
+SEND(RES1);
+
+SEND (#EL RESULTADO DE LA CONCATENACIÓN ES #);
+
+SEND(RES2);
+
+
+END}
+
+-------------------------------------------------
+*********con error********
+SEMANTICO_OK BEGIN{
+
+NUM A,B,C,RES1,RES2;
+
+WORD APE,NOM,DIR;
+
+RES2=A+B+C;
+
+RES1=APE+NOM+DIR+A;
+
+SEND (#EL RESULTADO DE LA SUMA ES #);
+
+SEND(RES1);
+
+SEND (#EL RESULTADO DE LA CONCATENACIÓN ES #);
+
+SEND(RES2);
+
+
+END}
